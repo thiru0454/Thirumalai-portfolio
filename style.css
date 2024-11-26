@@ -2,6 +2,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  scroll-behavior: smooth;
 }
 
 body {
@@ -14,6 +15,7 @@ body {
 .navbar {
   background: linear-gradient(to right, #007bff, #6610f2);
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: background 0.3s ease;
 }
 
 .navbar-brand {
@@ -36,6 +38,24 @@ header {
   color: white;
   text-align: center;
   padding: 100px 0;
+  position: relative;
+  overflow: hidden;
+}
+
+header::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 1;
+}
+
+header h1, header p {
+  position: relative;
+  z-index: 2;
 }
 
 header h1 {
@@ -52,12 +72,29 @@ header p {
   margin-bottom: 0;
 }
 
+button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  background-color: #007bff;
+  color: white;
+  font-weight: bold;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #0056b3;
+  transform: scale(1.05);
+}
+
 section h2 {
   text-transform: uppercase;
   font-weight: 700;
   margin-bottom: 30px;
   color: #333;
   position: relative;
+  text-align: center;
 }
 
 section h2::after {
@@ -83,12 +120,42 @@ section h2::after {
 #skills {
   background: #f0f4fc;
   padding: 60px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 #skills h5 {
   font-weight: 600;
   margin-bottom: 15px;
   color: #007bff;
+  text-transform: uppercase;
+}
+
+.skill-bar {
+  position: relative;
+  height: 25px;
+  width: 80%;
+  background: #e0e0e0;
+  border-radius: 50px;
+  margin-bottom: 20px;
+  overflow: hidden;
+}
+
+.skill-bar span {
+  display: block;
+  height: 100%;
+  background: linear-gradient(to right, #007bff, #6610f2);
+  animation: grow 1.5s ease-in-out forwards;
+}
+
+@keyframes grow {
+  from {
+    width: 0;
+  }
+  to {
+    width: 90%;
+  }
 }
 
 #projects .card {
