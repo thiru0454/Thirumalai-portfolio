@@ -5,80 +5,145 @@
 }
 
 body {
-  font-family: Arial, sans-serif;
-  line-height: 1.6;
+  font-family: 'Poppins', sans-serif;
   color: #333;
-  background: #f4f4f9;
+  background: #f9f9f9;
+  line-height: 1.6;
+}
+
+.navbar {
+  background: linear-gradient(to right, #007bff, #6610f2);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.navbar-brand {
+  font-weight: bold;
+  color: #fff !important;
+  text-transform: uppercase;
+}
+
+.navbar-nav .nav-link {
+  color: #fff !important;
+  transition: color 0.3s ease;
+}
+
+.navbar-nav .nav-link:hover {
+  color: #ffd700 !important;
 }
 
 header {
-  background: #333;
-  color: #fff;
-  padding: 1.5rem 0;
+  background: linear-gradient(to right, #6610f2, #007bff);
+  color: white;
   text-align: center;
+  padding: 100px 0;
 }
 
 header h1 {
-  font-size: 2.5rem;
+  font-size: 3rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+  letter-spacing: 2px;
 }
 
 header p {
   font-size: 1.2rem;
-  margin-top: 0.5rem;
+  font-weight: 300;
+  margin-bottom: 0;
 }
 
-.container {
-  width: 80%;
-  margin: 0 auto;
-  overflow: hidden;
-  padding: 2rem 0;
-}
-
-section {
-  margin: 2rem 0;
-}
-
-h2 {
-  text-align: center;
-  color: #444;
-  margin-bottom: 1rem;
+section h2 {
   text-transform: uppercase;
+  font-weight: 700;
+  margin-bottom: 30px;
+  color: #333;
+  position: relative;
 }
 
-ul {
-  list-style: none;
+section h2::after {
+  content: '';
+  width: 60px;
+  height: 4px;
+  background: #007bff;
+  display: block;
+  margin: 10px auto;
 }
 
-ul li {
-  margin-bottom: 0.5rem;
-  font-size: 1rem;
-}
-
-.project {
+#about {
   background: #fff;
-  padding: 1rem;
-  margin: 1rem 0;
-  border: 1px solid #ddd;
-  border-radius: 5px;
+  padding: 60px 0;
 }
 
-.project h3 {
+#about p {
+  font-size: 1.1rem;
+  color: #555;
+  margin-top: 20px;
+}
+
+#skills {
+  background: #f0f4fc;
+  padding: 60px 0;
+}
+
+#skills h5 {
+  font-weight: 600;
+  margin-bottom: 15px;
+  color: #007bff;
+}
+
+#projects .card {
+  border: none;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+#projects .card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+}
+
+#projects .card-title {
+  font-weight: 700;
   color: #333;
 }
 
-a {
-  color: #007acc;
-  text-decoration: none;
+#projects .card-text {
+  color: #555;
 }
 
-a:hover {
-  text-decoration: underline;
+#contact {
+  background: linear-gradient(to right, #007bff, #6610f2);
+  color: white;
+  padding: 60px 0;
+  text-align: center;
+}
+
+#contact a {
+  color: #ffd700;
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.3s ease;
+}
+
+#contact a:hover {
+  color: #fff;
 }
 
 footer {
   background: #333;
-  color: #fff;
+  color: #ccc;
   text-align: center;
-  padding: 1rem 0;
-  margin-top: 2rem;
+  padding: 15px 0;
+  font-size: 0.9rem;
+}
+
+footer a {
+  color: #007bff;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+footer a:hover {
+  color: #ffd700;
 }
