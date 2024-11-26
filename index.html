@@ -3,103 +3,67 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Thirumalai R - Portfolio</title>
+  <title>Portfolio - Thirumalai R</title>
   <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
   <header>
     <div class="container">
-      <h1 class="logo">Thirumalai R</h1>
       <nav>
+        <h1>Developer X</h1>
         <ul>
-          <li><a href="#about">About Me</a></li>
-          <li><a href="#skills">Skills</a></li>
-          <li><a href="#projects">Projects</a></li>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#projects">Portfolio</a></li>
           <li><a href="#contact">Contact</a></li>
         </ul>
       </nav>
+      <div class="hero" id="home">
+        <h2>I'm Thirumalai R,</h2>
+        <h3>An AI and Data Science Enthusiast</h3>
+        <p>I specialize in front-end, back-end, and AI-driven solutions. Currently pursuing AI and Data Science at Sona College of Technology.</p>
+        <a href="#about" class="btn">Learn More</a>
+      </div>
     </div>
   </header>
 
-  <!-- About Me Section -->
-  <section id="about" class="section">
+  <section class="about" id="about">
     <div class="container">
       <h2>About Me</h2>
-      <div class="about-content">
-        <img src="your-photo.jpg" alt="Thirumalai R" class="about-photo">
-        <p>I am a second-year Artificial Intelligence and Data Science student at Sona College of Technology, passionate about technology and its application in the real world. I have strong expertise in front-end and back-end development and am currently exploring projects related to AI, data science, and industrial automation.</p>
+      <p>
+        I'm a passionate AI and Data Science student skilled in front-end and back-end development. Currently working on a factory-related project, I aim to deliver efficient and intelligent solutions.
+      </p>
+      <a href="#projects" class="btn">View My Work</a>
+    </div>
+  </section>
+
+  <section class="portfolio" id="projects">
+    <div class="container">
+      <h2>My Work</h2>
+      <div class="projects">
+        <div class="project">
+          <h3>Factory Project</h3>
+          <p>A smart AI-driven system to optimize factory operations and workflows.</p>
+        </div>
+        <div class="project">
+          <h3>Portfolio Website</h3>
+          <p>This website showcasing my skills and projects.</p>
+        </div>
       </div>
     </div>
   </section>
 
-  <!-- Skills Section -->
-  <section id="skills" class="section">
+  <footer id="contact">
     <div class="container">
-      <h2>Skills</h2>
-      <ul>
-        <li>Programming Languages: Python, JavaScript, C++, HTML, CSS</li>
-        <li>Web Development: React, Node.js, Flask</li>
-        <li>Database Management: MySQL, MongoDB</li>
-        <li>Machine Learning: TensorFlow, Keras, Scikit-learn</li>
-        <li>Data Analysis: Pandas, Matplotlib, Seaborn</li>
-      </ul>
-    </div>
-  </section>
-
-  <!-- Projects Section -->
-  <section id="projects" class="section">
-    <div class="container">
-      <h2>Projects</h2>
-      <div class="project">
-        <h3>Factory Automation System</h3>
-        <p>A real-time monitoring and control system for factory machines, enabling predictive maintenance using AI and IoT sensors.</p>
+      <h2>Contact Me</h2>
+      <p>Feel free to reach out to me through the following platforms:</p>
+      <div class="social">
+        <a href="https://www.linkedin.com/in/thirumalai-r-b28a3a318" target="_blank"><i class="fab fa-linkedin"></i></a>
+        <a href="https://github.com" target="_blank"><i class="fab fa-github"></i></a>
+        <a href="mailto:thirumalai.workdesk@gmail.com"><i class="fas fa-envelope"></i></a>
       </div>
-      <div class="project">
-        <h3>Personal Finance Dashboard</h3>
-        <p>An interactive dashboard to visualize personal finance data, helping users track expenses and budget more efficiently.</p>
-      </div>
-      <div class="project">
-        <h3>E-commerce Website</h3>
-        <p>Developed a fully functional e-commerce website with integrated payment gateway and user authentication system.</p>
-      </div>
-      <div class="project">
-        <h3>AI-Based Image Classifier</h3>
-        <p>Built a machine learning model for classifying images using deep learning techniques and deployed it as a web app.</p>
-      </div>
-    </div>
-  </section>
-
-  <!-- Contact Section -->
-  <section id="contact" class="section">
-    <div class="container">
-      <h2>Contact Details</h2>
-      <p>Email: thirumalai.r@example.com</p>
-      <p>Phone: +91 123 456 7890</p>
-      <p>LinkedIn: <a href="https://www.linkedin.com/in/thirumalai-r-b28a3a318">Thirumalai R LinkedIn</a></p>
-      <p>GitHub: <a href="https://github.com/thirumalai-r">Thirumalai R GitHub</a></p>
-    </div>
-  </section>
-
-  <footer>
-    <div class="container">
-      <p>&copy; 2024 Thirumalai R. All Rights Reserved.</p>
     </div>
   </footer>
-
-  <script>
-    // JavaScript for Scroll Animation
-    window.addEventListener("scroll", function () {
-      const sections = document.querySelectorAll(".section");
-      sections.forEach(section => {
-        const rect = section.getBoundingClientRect();
-        if (rect.top >= 0 && rect.bottom <= window.innerHeight) {
-          section.classList.add("show");
-        } else {
-          section.classList.remove("show");
-        }
-      });
-    });
-  </script>
 </body>
 </html>
